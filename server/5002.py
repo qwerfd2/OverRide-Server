@@ -133,7 +133,7 @@ async def api_function(request: Request):
     
     elif name == "nameCheck":
         player_name = content_dict.get("name", "")
-        query = player.select(player.c.id).where(player.c.name == player_name)
+        query = player.select().where(player.c.name == player_name)
         result = await database.fetch_one(query)
         if not REGISTRATION:
             return JSONResponse({"regClosed": True})
