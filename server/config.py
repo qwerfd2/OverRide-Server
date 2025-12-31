@@ -1,0 +1,6 @@
+HOST = "127.0.0.1"
+PORT = 9066
+REGISTRATION = True
+DEBUG = True
+SSL_CERT = None
+SSL_KEY = None
