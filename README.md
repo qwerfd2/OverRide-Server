@@ -3,7 +3,9 @@ This is the server &amp; package repo of a OverRapid mod that I made a while bac
 
 ## The Server
 
-Simply get the code, download the asset, place the asset, edit `config.py`'s host and port, and run.
+Simply get the code, unzip the asset in the server root directory, edit `config.py`'s host and port, and run.
+
+Asset: [Google Drive](https://drive.google.com/file/d/12z7gzaY6BNmoz6svmh1yg_yypjos82Bv/view?usp=drive_link)
 
 ## The Client
 
