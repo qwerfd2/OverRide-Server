@@ -5,7 +5,7 @@ This is the server &amp; package repo of a OverRapid mod that I made a while bac
 
 Download the code and asset, unzip the asset in the server root directory.
 
-Asset: [Google Drive](https://drive.google.com/file/d/12z7gzaY6BNmoz6svmh1yg_yypjos82Bv/view?usp=drive_link)
+V3 Asset: [Google Drive](https://drive.google.com/file/d/1YeDiqs2bX8ZvWQQg1RoaoHTWEDmV7uWH/view?usp=drive_link)
 
 After this, follow the Manual.
 
