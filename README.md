@@ -5,7 +5,25 @@ This is the server &amp; package repo of a OverRapid mod that I made a while bac
 
 Download the code and asset, unzip the asset in the server root directory.
 
-V4 Asset: [Google Drive](https://drive.google.com/file/d/1YeDiqs2bX8ZvWQQg1RoaoHTWEDmV7uWH/view?usp=drive_link)
+## The Asset
+
+There are two folders of assets that you must download before the server is functional.
+
+They are all placed under the server root directory.
+
+`OverRapid`: Contains music, chart, BGA, and config files. They are stable, and incremental.
+
+`Resource`: Contains basic assets, such as images, movies, and transition audios. This is volatile, and the content inside can shift around as version progress.
+
+Below are the Google Drive and Baidu Drive link to a folder, containing two zip files.
+
+Download and unzip some or all of them to the root directory.
+
+If this is your first time setting the server up, download both zip files.
+
+If you are here for an upgrade, only download the `Resources` `素材包2` pack, delete the original `Resources` folder, and overwrite any conflicting files.
+
+V4 Asset: [Google Drive](https://drive.google.com/drive/folders/1jR37N2wi6M1l0Eq1QeO-UkVtXPd-vkJt?usp=sharing) [Baidu Drive](https://pan.baidu.com/s/1jhzKBP3zP0dnfgcsLS1xGQ Code: AAAA)
 
 After this, follow the Manual.
 
