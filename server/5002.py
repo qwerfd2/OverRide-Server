@@ -85,7 +85,7 @@ async def set_player_data(user_id, data_field, new_data):
 # ------------ CDN -------------
 
 root_folder = os.path.dirname(os.path.abspath(__file__))
-allowed_folders = ["OverRapid", "Resources"]
+allowed_folders = ["OverRapid", "Resources", "OverRide"]
 
 async def serve_file(request):
     path = request.path_params['path']
@@ -154,14 +154,12 @@ async def api_function(request: Request):
         try:
             score = float(content_dict.get("score", ""))
         except ValueError:
-            print("parse failed")
             return JSONResponse({"dummy": False}, status_code=400)
-        print(player_info['rating'])
+
         if player_info['rating'] is not None:
             await set_player_data(user_id, "rating", score)
             return JSONResponse({"dummy": True})
         else:
-            print("else failed")
             return JSONResponse({"dummy": False}, status_code=400)
 
     elif name == "rename":
@@ -291,7 +289,8 @@ async def pvp_function(request: Request):
             lobby_data = {
                 "data": {
                     "mp3": data.get("mp3", ""),
-                    "diff": data.get("diff", "")
+                    "diff": data.get("diff", ""),
+                    "fm": data.get("fm", False),
                 },
                 "timestamp": int(time.time()),
                 "players": {
@@ -383,6 +382,9 @@ async def pvp_function(request: Request):
                 return JSONResponse(lobby["match"])
             else:
                 return JSONResponse({})
+            
+        else:
+            return JSONResponse({})
 
 routes = [
     Route("/Api", api_function, methods=["POST"]),
