@@ -2,6 +2,7 @@ from starlette.applications import Starlette
 from starlette.responses import FileResponse, Response, JSONResponse
 from starlette.routing import Route
 from starlette.requests import Request
+import contextlib
 import os
 import databases
 import sqlalchemy
@@ -393,16 +394,16 @@ routes = [
 
 routes.append(Route("/{path:path}", serve_file))
 
-app = Starlette(debug=DEBUG, routes=routes)
-
-@app.on_event("startup")
-async def startup():
+@contextlib.asynccontextmanager
+async def lifespan(app: Starlette):
     await database.connect()
     await init_db()
+    try:
+        yield
+    finally:
+        await database.disconnect()
 
-@app.on_event("shutdown")
-async def shutdown():
-    await database.disconnect()
+app = Starlette(debug=DEBUG, routes=routes, lifespan=lifespan)
 
 if __name__ == "__main__":
     import uvicorn
